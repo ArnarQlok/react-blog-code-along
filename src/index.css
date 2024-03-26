@@ -104,8 +104,7 @@ body {
 }
 
 .Nav li:hover,
-.Nav li:focus,
-.active {
+.Nav li:focus {
   padding: 1rem;
 }
 
@@ -117,8 +116,7 @@ body {
 .Nav li:hover,
 .Nav li:focus,
 .Nav li:hover a,
-.Nav li:focus a,
-.active {
+.Nav li:focus a {
   background-color: #eee;
   color: #333;
 }
@@ -129,7 +127,7 @@ body {
 }
 
 .active {
-  color: #333;
+  text-decoration: underline !important;
 }
 
 .Home,
@@ -256,8 +254,7 @@ body {
   .Nav li:hover,
   .Nav li:focus,
   .Nav li:hover a,
-  .Nav li:focus a,
-  .active {
+  .Nav li:focus a {
     background-color: #eee;
     color: #333;
   }
