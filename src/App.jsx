@@ -1,10 +1,4 @@
 // Layout komponenter
-
-/* 
-1. Skapa våra komponent filer
-2. Skriv grundläggande struktur eller rafce
-3. returna en h1 med namn på komponenten
-*/
 import Header from "./Header";
 import Nav from "./Nav";
 import Footer from "./Footer";
@@ -21,7 +15,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header title="React Blog" />
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
