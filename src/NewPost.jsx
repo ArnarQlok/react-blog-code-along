@@ -19,7 +19,7 @@ const NewPost = ({
           value={postTitle}
           onChange={(e) => setPostTitle(e.target.value)}
         />
-        <label htmlFor="postBody">Title:</label>
+        <label htmlFor="postBody">Post:</label>
         <textarea
           type="text"
           id="postBody"
