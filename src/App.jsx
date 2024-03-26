@@ -11,7 +11,7 @@ import About from "./About";
 import Missing from "./Missing";
 
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { format } from "date-fns";
 
 function App() {
@@ -48,6 +48,16 @@ function App() {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const filteredResults = posts.filter(
+      (post) =>
+        post.body.toLowerCase().includes(search.toLowerCase()) ||
+        post.title.toLowerCase().includes(search.toLowerCase())
+    );
+
+    setSearchResults(filteredResults.reverse());
+  }, [posts, search]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const id = posts.length ? posts[posts.length - 1].id + 1 : 1;
@@ -70,7 +80,7 @@ function App() {
       <Header title="React Blog" />
       <Nav search={search} setSearch={setSearch} />
       <Routes>
-        <Route path="/" element={<Home posts={posts} />} />
+        <Route path="/" element={<Home posts={searchResults} />} />
         <Route
           path="/post"
           element={
