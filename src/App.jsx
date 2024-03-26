@@ -42,6 +42,9 @@ function App() {
   ]);
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [postTitle, setPostTitle] = useState("");
+  const [postBody, setPostBody] = useState("");
+
   const navigate = useNavigate();
 
   const handleDelete = (id) => {
@@ -55,7 +58,17 @@ function App() {
       <Nav search={search} setSearch={setSearch} />
       <Routes>
         <Route path="/" element={<Home posts={posts} />} />
-        <Route path="/post" element={<NewPost />} />
+        <Route
+          path="/post"
+          element={
+            <NewPost
+              postTitle={postTitle}
+              setPostTitle={setPostTitle}
+              postBody={postBody}
+              setPostBody={setPostBody}
+            />
+          }
+        />
         <Route
           path="/post/:id"
           element={<PostPage posts={posts} handleDelete={handleDelete} />}
