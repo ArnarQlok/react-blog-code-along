@@ -61,7 +61,15 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const id = posts.length ? posts[posts.length - 1].id + 1 : 1;
-    const datetime = format(new Date(), "MMMM dd, yyyy pp");
+    const datetime = format(new Date(), "MMMM dd, yyyy - H:m");
+    // const datetime = formatRelative(timestamp, new Date(), {
+    //   locale: sv,
+    //   timeFormat: "24hours",
+    // });
+    // formatRelative(timestamp, new Date(), {
+    //   locale: en,
+    //   timeFormat: "24hours",
+    // });
     const newPost = { id, title: postTitle, datetime, body: postBody };
     const allPosts = [...posts, newPost];
     setPosts(allPosts);
