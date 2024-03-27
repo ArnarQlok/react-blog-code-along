@@ -5,30 +5,6 @@
       "title": "My First Post",
       "datetime": "July 01, 2021 11:17:36 AM",
       "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequatur expedita, assumenda similique non optio! Modi nesciunt excepturi corrupti atque blanditiis quo nobis, non optio quae possimus illum exercitationem ipsa!"
-    },
-    {
-      "id": "2",
-      "title": "My 2nd Post",
-      "datetime": "July 01, 2021 11:17:36 AM",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequatur expedita, assumenda similique non optio! Modi nesciunt excepturi corrupti atque blanditiis quo nobis, non optio quae possimus illum exercitationem ipsa!"
-    },
-    {
-      "id": "21",
-      "title": "27 mars",
-      "datetime": "March 27, 2024 - 9:40",
-      "body": "De e la gött!"
-    },
-    {
-      "id": "211",
-      "title": "Hej hej",
-      "datetime": "March 27, 2024 - 09:41",
-      "body": "hur är läget."
-    },
-    {
-      "id": "212",
-      "title": "Jag vill ha id 212",
-      "datetime": "March 27, 2024 - 09:43",
-      "body": "Kan jag få det?"
     }
   ]
 }
