@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router";
+import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
 
 const EditPost = ({
@@ -23,7 +23,7 @@ const EditPost = ({
       {editTitle && (
         <>
           <h2>Edit Post</h2>
-          <form className="newPostForm" onSubmit={(e) => e.preventDefault}>
+          <form className="newPostForm" onSubmit={(e) => e.preventDefault()}>
             <label htmlFor="postTitle">Title:</label>
             <input
               type="text"

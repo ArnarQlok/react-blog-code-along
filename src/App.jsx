@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import Home from "./Home";
 import NewPost from "./NewPost";
 import PostPage from "./PostPage";
+import EditPost from "./EditPost";
 import About from "./About";
 import Missing from "./Missing";
 
@@ -113,6 +114,19 @@ function App() {
               setPostTitle={setPostTitle}
               postBody={postBody}
               setPostBody={setPostBody}
+            />
+          }
+        />
+        <Route
+          path="/edit/:id"
+          element={
+            <EditPost
+              posts={posts}
+              handleEdit={handleEdit}
+              editTitle={editTitle}
+              setEditTitle={setEditTitle}
+              editBody={editBody}
+              setEditBody={setEditBody}
             />
           }
         />

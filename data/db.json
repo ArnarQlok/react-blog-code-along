@@ -2,9 +2,15 @@
   "posts": [
     {
       "id": "1",
-      "title": "My First Post",
-      "datetime": "July 01, 2021 11:17:36 AM",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequatur expedita, assumenda similique non optio! Modi nesciunt excepturi corrupti atque blanditiis quo nobis, non optio quae possimus illum exercitationem ipsa!"
+      "title": "My First Post!\"!",
+      "datetime": "March 27, 2024 - 11:37",
+      "body": "Jag vill hem!"
+    },
+    {
+      "id": "2",
+      "title": "Kära dagbok",
+      "datetime": "March 27, 2024 - 11:38",
+      "body": "Idag har vart en bra dag!!!!!"
     }
   ]
 }
