@@ -105,10 +105,10 @@ function App() {
   return (
     <div className="App">
       <DataProvider>
-        <Header title="React Blog" width={width} />
+        <Header title="React Blog" />
         <Nav search={search} setSearch={setSearch} />
         <Routes>
-          <Route path="/" element={<Home posts={searchResults} />} />
+          <Route path="/" element={<Home searchResults={searchResults} />} />
           <Route
             path="/post"
             element={

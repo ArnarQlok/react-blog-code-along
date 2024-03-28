@@ -91,7 +91,18 @@ export const DataProvider = ({ children }) => {
     }
   };
 
-  return <DataContext.Provider value={{}}>{children}</DataContext.Provider>;
+  return (
+    <DataContext.Provider
+      value={{
+        width,
+        search,
+        setSearch,
+        searchResults,
+      }}
+    >
+      {children}
+    </DataContext.Provider>
+  );
 };
 
 export default DataContext;
