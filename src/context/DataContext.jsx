@@ -1,23 +1,12 @@
-// Layout komponenter
-import Header from "./Header";
-import Nav from "./Nav";
-import Footer from "./Footer";
-
-// Pages
-import Home from "./Home";
-import NewPost from "./NewPost";
-import PostPage from "./PostPage";
-import EditPost from "./EditPost";
-import About from "./About";
-import Missing from "./Missing";
-
-import { Routes, Route, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { createContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
 import api from "./api/posts";
 import useWindowSize from "./hooks/useWindowSize";
 
-function App() {
+const DataContext = createContext({});
+
+export const DataProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -101,47 +90,8 @@ function App() {
       console.log(`Error ${err.message}`);
     }
   };
-  return (
-    <div className="App">
-      <Header title="React Blog" width={width} />
-      <Nav search={search} setSearch={setSearch} />
-      <Routes>
-        <Route path="/" element={<Home posts={searchResults} />} />
-        <Route
-          path="/post"
-          element={
-            <NewPost
-              handleSubmit={handleSubmit}
-              postTitle={postTitle}
-              setPostTitle={setPostTitle}
-              postBody={postBody}
-              setPostBody={setPostBody}
-            />
-          }
-        />
-        <Route
-          path="/edit/:id"
-          element={
-            <EditPost
-              posts={posts}
-              handleEdit={handleEdit}
-              editTitle={editTitle}
-              setEditTitle={setEditTitle}
-              editBody={editBody}
-              setEditBody={setEditBody}
-            />
-          }
-        />
-        <Route
-          path="/post/:id"
-          element={<PostPage posts={posts} handleDelete={handleDelete} />}
-        />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<Missing />} />
-      </Routes>
-      <Footer />
-    </div>
-  );
-}
 
-export default App;
+  return <DataContext.Provider value={{}}>{children}</DataContext.Provider>;
+};
+
+export default DataContext;
