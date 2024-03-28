@@ -98,6 +98,11 @@ export const DataProvider = ({ children }) => {
         search,
         setSearch,
         searchResults,
+        handleSubmit,
+        postTitle,
+        setPostTitle,
+        postBody,
+        setPostBody,
       }}
     >
       {children}
